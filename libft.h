@@ -6,7 +6,7 @@
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:32:46 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/10 16:01:33 by abelhadj         ###   ########.fr       */
+/*   Updated: 2022/10/10 17:34:57 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *str, const char *to_find, size_t len);
 char	*ft_strdup(const char *s);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
 
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memset(void *str, int c, size_t n);
