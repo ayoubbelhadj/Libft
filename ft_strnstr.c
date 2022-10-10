@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/10 11:58:41 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/10 14:25:48 by abelhadj         ###   ########.fr       */
+/*   Created: 2022/10/10 14:29:36 by abelhadj          #+#    #+#             */
+/*   Updated: 2022/10/10 14:49:17 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
-	size_t			i;
-	unsigned char	*str1;
-	unsigned char	*str2;
+	size_t	i;
+	size_t	j;
 
-	str1 = (unsigned char *)s1;
-	str2 = (unsigned char *)s2;
 	i = 0;
-	if (n == 0)
-		return (0);
-	while (i < n)
+	if (!*to_find)
+		return ((char *)str);
+	while (str[i] && i < len)
 	{
-		if (str1[i] != str2[i])
-			return (str1[i] - str2[i]);
+		j = 0;
+		while (str[i + j] == to_find[j] && i + j < len)
+		{
+			j++;
+			if (to_find[j] == '\0')
+			{
+				return ((char *)&str[i]);	
+			}
+		}
 		i++;
 	}
 	return (0);
