@@ -6,7 +6,7 @@
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 14:29:36 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/10 14:49:17 by abelhadj         ###   ########.fr       */
+/*   Updated: 2022/10/11 12:12:25 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,7 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 		{
 			j++;
 			if (to_find[j] == '\0')
-			{
-				return ((char *)&str[i]);	
-			}
+				return ((char *)&str[i]);
 		}
 		i++;
 	}
