@@ -1,39 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 20:08:24 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/11 17:52:19 by abelhadj         ###   ########.fr       */
+/*   Created: 2022/10/11 13:44:45 by abelhadj          #+#    #+#             */
+/*   Updated: 2022/10/11 13:47:33 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-int	ft_atoi(const char *nptr)
+char	*ft_itoa(int n)
 {
-	int	i;
-	int	sign;
-	int	nbr;
-
-	i = 0;
-	sign = 1;
-	nbr = 0;
-	while (nptr[i] == ' ' || nptr[i] == '\t' || nptr[i] == '\n'
-		|| nptr[i] == '\f' || nptr[i] == '\v' || nptr[i] == '\r')
-		i++;
-	if (nptr[i] == '+' || nptr[i] == '-')
-	{
-		if (nptr[i] == '-')
-			sign *= -1;
-		i++;
-	}
-	while (ft_isdigit(nptr[i]))
-	{
-		nbr = nbr * 10 + nptr[i] - '0';
-		i++;
-	}
-	return (nbr * sign);
+	char	*a;
+	
+	a = 
 }
