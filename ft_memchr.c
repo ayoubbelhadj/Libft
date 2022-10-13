@@ -6,7 +6,7 @@
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 21:34:20 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/10 12:37:34 by abelhadj         ###   ########.fr       */
+/*   Updated: 2022/10/13 19:20:31 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	str = (char *)s;
 	while (i < n)
 	{
-		if (str[i] == c)
+		if (str[i] == (char)c)
 			return ((void *)&s[i]);
 		i++;
 	}

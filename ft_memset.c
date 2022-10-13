@@ -6,7 +6,7 @@
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 17:02:53 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/09 19:11:49 by abelhadj         ###   ########.fr       */
+/*   Updated: 2022/10/13 19:21:57 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memset(void *str, int c, size_t n)
 	s = (char *)str;
 	while (i < n)
 	{
-		s[i] = c;
+		s[i] = (char)c;
 		i++;
 	}
 	return (str);

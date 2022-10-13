@@ -6,11 +6,11 @@
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:05:05 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/10 12:37:04 by abelhadj         ###   ########.fr       */
+/*   Updated: 2022/10/13 19:21:43 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	return (c >= 32 && c < 127);
+	return ((char)c >= 32 && (char)c < 127);
 }

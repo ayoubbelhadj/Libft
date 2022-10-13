@@ -6,7 +6,7 @@
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 16:45:25 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/10 17:30:09 by abelhadj         ###   ########.fr       */
+/*   Updated: 2022/10/13 18:35:43 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[i] = '\0';
 	return (str);
 }
-// int main()
-// {
-// 	char *p = "123456";
-
-// 	printf("%s", ft_substr(p, 1, 0));
-// }

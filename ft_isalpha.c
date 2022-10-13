@@ -6,11 +6,12 @@
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:34:37 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/09 19:18:28 by abelhadj         ###   ########.fr       */
+/*   Updated: 2022/10/13 19:21:24 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
+	return (((char)c >= 'a' && (char)c <= 'z')
+		|| ((char)c >= 'A' && (char)c <= 'Z'));
 }
