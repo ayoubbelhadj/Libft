@@ -6,7 +6,7 @@
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:35:24 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/10 18:58:00 by abelhadj         ###   ########.fr       */
+/*   Updated: 2022/10/17 13:15:53 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*str;
 	int		len;
 
+	if (!s1 || !s2)
+		return (0);
 	len = ft_strlen(s1) + ft_strlen(s2);
 	str = (char *)malloc(len + 1);
 	if (!str)

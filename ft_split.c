@@ -6,13 +6,13 @@
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 15:43:30 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/14 17:45:01 by abelhadj         ###   ########.fr       */
+/*   Updated: 2022/10/17 13:13:23 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_free(char **t)
+static void	*ft_free(char **t)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ void	*ft_free(char **t)
 	return (NULL);
 }	
 
-int	ft_count(char *s, char c)
+static int	ft_count(char *s, char c)
 {
 	int	i;
 	int	j;
@@ -53,7 +53,7 @@ int	ft_count(char *s, char c)
 	return (k);
 }
 
-int	ft_count2(char *s, char c)
+static int	ft_count2(char *s, char c)
 {
 	int	i;
 
@@ -65,7 +65,7 @@ int	ft_count2(char *s, char c)
 	return (i);
 }
 
-char	**ft_fill(char **t, char *s, char c)
+static char	**ft_fill(char **t, char *s, char c)
 {
 	int		i;
 	int		j;
@@ -97,6 +97,8 @@ char	**ft_split(char const *s, char c)
 {
 	char	**t;
 
+	if (!s)
+		return (0);
 	t = (char **)malloc(sizeof(char *) * (ft_count((char *)s, c) + 1));
 	if (!t)
 		return (0);

@@ -6,11 +6,13 @@
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:58:57 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/13 19:21:39 by abelhadj         ###   ########.fr       */
+/*   Updated: 2022/10/17 13:19:07 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include"libft.h"
+
 int	ft_isdigit(int c)
 {
-	return ((char)c >= '0' && (char)c <= '9');
+	return (c >= '0' && c <= '9');
 }

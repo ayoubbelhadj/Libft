@@ -6,7 +6,7 @@
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 13:00:32 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/13 18:45:14 by abelhadj         ###   ########.fr       */
+/*   Updated: 2022/10/17 13:04:02 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int	i;
 
-	i = 0;
 	if (!s)
 		return ;
+	i = 0;
 	while (s[i])
 	{
 		f(i, s + i);

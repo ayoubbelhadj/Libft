@@ -6,11 +6,13 @@
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:05:05 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/13 19:21:43 by abelhadj         ###   ########.fr       */
+/*   Updated: 2022/10/17 13:19:12 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include"libft.h"
+
 int	ft_isprint(int c)
 {
-	return ((char)c >= 32 && (char)c < 127);
+	return (c >= 32 && c < 127);
 }

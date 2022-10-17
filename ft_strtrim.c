@@ -6,13 +6,13 @@
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:12:06 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/11 15:16:40 by abelhadj         ###   ########.fr       */
+/*   Updated: 2022/10/17 15:04:39 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-int	check_s(char c, char const *set)
+static int	check_s(char c, char const *set)
 {
 	int	i;
 
