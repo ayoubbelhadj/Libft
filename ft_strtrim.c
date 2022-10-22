@@ -6,7 +6,7 @@
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:12:06 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/17 15:04:39 by abelhadj         ###   ########.fr       */
+/*   Updated: 2022/10/21 00:38:46 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		end;
 	int		len;
 
+	if (!s1 || !set)
+		return (NULL);
 	i = 0;
 	start = 0;
 	while (s1[start] && check_s(s1[start], set))
@@ -42,15 +44,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (end > start && check_s(s1[end - 1], set))
 		end--;
 	len = end - start;
-	str = (char *)malloc(sizeof(*s1) * len + 1);
-	if (!str)
-		return (NULL);
-	while (start < end)
-	{
-		str[i] = s1[start];
-		start++;
-		i++;
-	}
-	str[i] = '\0';
+	str = ft_substr(s1, start, len);
 	return (str);
 }

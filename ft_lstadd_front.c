@@ -6,7 +6,7 @@
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 11:37:08 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/17 11:37:38 by abelhadj         ###   ########.fr       */
+/*   Updated: 2022/10/18 18:18:31 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	
+	new -> next = *lst;
+	*lst = new;
 }
