@@ -6,7 +6,7 @@
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 20:08:24 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/22 01:29:05 by abelhadj         ###   ########.fr       */
+/*   Updated: 2022/10/22 15:59:54 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,6 @@ int	ft_atoi(const char *nptr)
 	}
 	while (ft_isdigit(nptr[i]))
 	{
-		if ((nbr > nbr * 10 + nptr[i] - '0') && sign == -1)
-			return (0);
-		if ((nbr > nbr * 10 + nptr[i] - '0') && sign == 1)
-			return (-1);
 		nbr = nbr * 10 + nptr[i] - '0';
 		i++;
 	}

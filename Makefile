@@ -6,7 +6,7 @@
 #    By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/09 16:27:19 by abelhadj          #+#    #+#              #
-#    Updated: 2022/10/19 20:28:06 by abelhadj         ###   ########.fr        #
+#    Updated: 2022/10/22 22:29:55 by abelhadj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,12 +36,10 @@ $(NAME): $(OBJS)
 clean:
 	rm -f $(OBJS)
 
-%.o : %.c
-	gcc $(CFLAGS) -o $@ -c $^
+%.o : %.c	libft.h
+	$(CC) $(CFLAGS) -o $@ -c $<
 
 fclean: clean
 	rm -f $(NAME)
 
 re : fclean all
-
-.PHONY: re fclean clean all
