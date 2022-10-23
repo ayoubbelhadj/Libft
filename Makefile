@@ -6,7 +6,7 @@
 #    By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/09 16:27:19 by abelhadj          #+#    #+#              #
-#    Updated: 2022/10/22 22:29:55 by abelhadj         ###   ########.fr        #
+#    Updated: 2022/10/23 18:18:03 by abelhadj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,8 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 ARC = ar rc
+
+LIBRARY = libft.h
 
 FILES = ft_isdigit.c ft_memset.c  ft_isprint.c ft_putendl_fd.c ft_itoa.c ft_strmapi.c ft_lstiter.c ft_lstsize.c\
 		  ft_bzero.c ft_putchar_fd.c  ft_atoi.c ft_strncmp.c ft_memchr.c ft_striteri.c ft_lstclear.c\
@@ -36,7 +38,7 @@ $(NAME): $(OBJS)
 clean:
 	rm -f $(OBJS)
 
-%.o : %.c	libft.h
+%.o : %.c	$(LIBRARY)
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 fclean: clean
