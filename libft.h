@@ -6,7 +6,7 @@
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:32:46 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/23 14:27:58 by abelhadj         ###   ########.fr       */
+/*   Updated: 2022/10/24 20:52:25 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <stdio.h>
 # include <string.h>
 # include <stdlib.h>
-# include <limits.h>
 
 typedef struct s_list
 {

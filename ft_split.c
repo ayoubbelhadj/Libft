@@ -6,7 +6,7 @@
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 15:43:30 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/17 13:13:23 by abelhadj         ###   ########.fr       */
+/*   Updated: 2022/10/24 21:13:49 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (0);
-	t = (char **)malloc(sizeof(char *) * (ft_count((char *)s, c) + 1));
+	t = malloc(sizeof(char *) * (ft_count((char *)s, c) + 1));
 	if (!t)
 		return (0);
 	return (ft_fill(t, (char *)s, c));

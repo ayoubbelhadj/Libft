@@ -6,7 +6,7 @@
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 00:44:07 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/22 16:22:54 by abelhadj         ###   ########.fr       */
+/*   Updated: 2022/10/24 20:48:22 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned char	*s;
 
 	if (!dest && !src)
-		return (0);
+		return (NULL);
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
 	if (d > s)

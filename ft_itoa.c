@@ -6,7 +6,7 @@
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 13:44:45 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/17 13:01:26 by abelhadj         ###   ########.fr       */
+/*   Updated: 2022/10/24 20:46:50 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_itoa(int n)
 	i = ft_count(nb);
 	snbr = malloc(i + 1);
 	if (!snbr)
-		return (0);
+		return (NULL);
 	if (nb < 0)
 	{
 		snbr[0] = '-';
