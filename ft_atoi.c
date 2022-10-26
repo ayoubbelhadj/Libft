@@ -6,7 +6,7 @@
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 20:08:24 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/24 02:25:32 by abelhadj         ###   ########.fr       */
+/*   Updated: 2022/10/25 00:40:02 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 int	ft_atoi(const char *nptr)
 {
-	int		i;
 	int		sign;
 	long	nbr;
+	long	n;
+	long	i;
 
 	i = 0;
 	sign = 1;
@@ -24,18 +25,16 @@ int	ft_atoi(const char *nptr)
 	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == ' ')
 		i++;
 	if (nptr[i] == '+' || nptr[i] == '-')
-	{
-		if (nptr[i] == '-')
+		if (nptr[i++] == '-')
 			sign *= -1;
-		i++;
-	}
+	n = i;
 	while (ft_isdigit(nptr[i]))
+		nbr = nbr * 10 + (nptr[i++] - '0');
+	if (i - n >= 19)
 	{
-		nbr = nbr * 10 + (nptr[i] - '0');
-		i++;
-		if (nbr * sign > 2147483647)
+		if (sign == 1)
 			return (-1);
-		else if (nbr * sign < -2147483648)
+		else
 			return (0);
 	}
 	return (nbr * sign);

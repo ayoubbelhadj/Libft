@@ -6,7 +6,7 @@
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 13:58:38 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/24 21:10:41 by abelhadj         ###   ########.fr       */
+/*   Updated: 2022/10/26 15:22:34 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_isalnum(int c)
 {
-	return (ft_isalpha((char)c) || ft_isdigit((char)c));
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

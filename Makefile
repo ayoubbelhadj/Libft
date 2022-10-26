@@ -6,7 +6,7 @@
 #    By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/09 16:27:19 by abelhadj          #+#    #+#              #
-#    Updated: 2022/10/23 23:19:42 by abelhadj         ###   ########.fr        #
+#    Updated: 2022/10/26 15:53:47 by abelhadj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,8 @@ OBJS = $(SRC:.c=.o)
 SRC_BONUS = ft_lstiter.c ft_lstsize.c\
 			ft_lstclear.c ft_lstdelone.c\
 			ft_lstadd_back.c ft_lstlast.c\
-			ft_lstnew.c ft_lstadd_front.c \
+			ft_lstnew.c ft_lstadd_front.c\
+			ft_lstmap.c\
 
 OBJS_BONUS = $(SRC_BONUS:.c=.o)
 

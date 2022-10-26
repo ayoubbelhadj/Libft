@@ -6,7 +6,7 @@
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 16:45:25 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/24 21:14:52 by abelhadj         ###   ########.fr       */
+/*   Updated: 2022/10/26 15:40:53 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (!s)
 		return (NULL);
-	size = ft_strlen(s + start);
 	if (start >= ft_strlen(s) || !len)
 		return (ft_strdup(""));
+	size = ft_strlen(s + start);
 	if (size <= len)
 		newlen = size;
 	else

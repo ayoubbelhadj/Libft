@@ -6,22 +6,16 @@
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 15:43:30 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/24 21:13:49 by abelhadj         ###   ########.fr       */
+/*   Updated: 2022/10/26 15:42:58 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	*ft_free(char **t)
+static void	*ft_free(char **t, int i)
 {
-	int	i;
-
-	i = 0;
-	while (t[i])
-	{
+	while (i--)
 		free(t[i]);
-		i++;
-	}
 	free(t);
 	return (NULL);
 }	
@@ -59,9 +53,7 @@ static int	ft_count2(char *s, char c)
 
 	i = 0;
 	while (s[i] && s[i] != c)
-	{
 		i++;
-	}
 	return (i);
 }
 
@@ -82,7 +74,7 @@ static char	**ft_fill(char **t, char *s, char c)
 		{
 			t[j] = malloc(sizeof(char) * (ft_count2((char *)s + i, c) + 1));
 			if (!t[j])
-				return (ft_free(t));
+				return (ft_free(t, j));
 			while (s[i] && s[i] != c)
 				t[j][k++] = s[i++];
 			t[j++][k] = 0;

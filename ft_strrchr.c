@@ -6,7 +6,7 @@
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:55:15 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/24 21:14:42 by abelhadj         ###   ########.fr       */
+/*   Updated: 2022/10/25 20:06:30 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	while (i <= (int)ft_strlen(d))
 	{
-		if (*s == (unsigned char)c)
+		if (*s == (char)c)
 			return ((char *)s);
 		s--;
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
