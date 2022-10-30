@@ -6,7 +6,7 @@
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 13:16:45 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/24 21:12:00 by abelhadj         ###   ########.fr       */
+/*   Updated: 2022/10/28 15:17:22 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
 
+	if (!lst || !new)
+		return ;
 	if (!*lst)
 	{
 		*lst = new;

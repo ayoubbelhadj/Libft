@@ -6,7 +6,7 @@
 /*   By: abelhadj <abelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:12:06 by abelhadj          #+#    #+#             */
-/*   Updated: 2022/10/24 21:14:46 by abelhadj         ###   ########.fr       */
+/*   Updated: 2022/10/27 16:52:48 by abelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,12 @@ static int	check_s(char c, char const *set)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
-	int		i;
 	int		start;
 	int		end;
 	int		len;
 
 	if (!s1 || !set)
 		return (NULL);
-	i = 0;
 	start = 0;
 	while (s1[start] && check_s(s1[start], set))
 		start++;
